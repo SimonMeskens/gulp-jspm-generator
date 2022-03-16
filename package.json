@@ -39,5 +39,8 @@
     "jspm",
     "jspm-generator",
     "gulp-jspm-generator"
-  ]
+  ],
+  "repository": "https://github.com/SimonMeskens/gulp-jspm-generator.git",
+  "bugs": "https://github.com/SimonMeskens/gulp-jspm-generator/issues",
+  "homepage": "https://github.com/SimonMeskens/gulp-jspm-generator#readme"
 }
