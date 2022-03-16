@@ -1,0 +1,43 @@
+{
+  "name": "gulp-jspm-generator",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Simon Meskens"
+  },
+  "description": "JSPM Generator Plugin for Gulp",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --write .",
+    "lint": "eslint . && prettier --check .",
+    "test": "tape test.mjs | tap-spec",
+    "docs": "jsdoc2md index.js > PLUGIN.md",
+    "start": "npm run lint && npm test",
+    "release": "standard-version"
+  },
+  "dependencies": {
+    "@jspm/generator": "^1.0.0-beta.29",
+    "plugin-error": "^1.0.1",
+    "through2": "^4.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "event-stream": "^4.0.1",
+    "jsdoc-to-markdown": "^7.1.1",
+    "prettier": "^2.5.1",
+    "standard-version": "^9.3.2",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.5.2",
+    "vinyl": "^2.2.1"
+  },
+  "keywords": [
+    "importmap",
+    "import-map",
+    "gulp",
+    "gulpplugin",
+    "jspm",
+    "jspm-generator",
+    "gulp-jspm-generator"
+  ]
+}
