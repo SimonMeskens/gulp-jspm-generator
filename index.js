@@ -23,6 +23,15 @@ const PLUGIN_NAME = "gulp-jspm-generator";
  * @return {Function}            Stream (Transform)
  */
 module.exports = function importmap(generator, options = {}) {
+  if (!generator) {
+    throw new PluginError({
+      plugin: PLUGIN_NAME,
+      message: "Missing JSPM Generator.",
+      stack: err.stack,
+      showStack: true,
+    });
+  }
+
   return transform((file, _, cb) => {
     if (file.isNull()) {
       return cb(null, file);
@@ -32,7 +41,7 @@ module.exports = function importmap(generator, options = {}) {
       return cb(
         new PluginError({
           plugin: PLUGIN_NAME,
-          message: "Streams are not supported",
+          message: "Streams are not supported.",
         })
       );
     }
